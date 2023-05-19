@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --rose1: #F2CEF2;
+    --viollet1: #9E91B7;
+    --rose2: #DF99F2;
+    --viollet2: #3D2DA6;
+    --bleue: #07338C;
+    --bleue2: #021740;
+}
+
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2% auto;
+}
+
+nav .nav-logo img{
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    margin: 10px;
+    color: white;
+}
+
+.nav-links a, .nav-links a:visited{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.nav-links .active{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--viollet2);
+}
+
+/* Mettre le même background à toutes les pages */
+body{
+    background: radial-gradient(126.67% 350.28% at -21.35% 0%,#11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%);
+}
+
+.statics {
+    position: sticky;
+    top: 0px;
+    margin-top: -150px;
+    margin-left: 20px;
+    writing-mode: vertical-lr;
+    overflow: hidden;
+    height: 350px;
+}
+
+.icons-statics{
+    margin-top: 10px;
+    margin-left: 10px;
+    height: 340px;
+    text-align: end;
+}
+
+.icons-statics img{
+    width: 20px;
+    margin-top: 10px;
+}
+
+#hr1 {
+    border: 2px solid var(--viollet1);
+}
+
+#hr2 {
+    color: var(--viollet1);
+    border: 2px solid var(--viollet1);
+    margin-top: -10px;
+    margin-left: 8px;
+    float: left;
+    height: 60%;
+}
+
+.hero-accueil {
+    background-image: url("illustrations + logo/Accueil/Pantherhome1..png");
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    margin-top: -200px;
+}
+
+.hero-wakanda {
+    width: 100%;
+    background-image: url("illustrations + logo/Wakanda/Pantherwakanda1.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.hero-enigme {
+    width: 100%;
+    background-image: url("illustrations + logo/Enigme/Pantherenigme1.png");
+    background-position: top left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 800px;
+}
+
+.div-hero {
+    width: 30%;
+    height: auto;
+    color: white;
+    padding-left: 13%;
+    padding-top: 10%;
+}
+
+.div-hero-enigme {
+    float: right;
+    width: 30%;
+    height: auto;
+    color: white;
+    padding-top: 10%;
+}
