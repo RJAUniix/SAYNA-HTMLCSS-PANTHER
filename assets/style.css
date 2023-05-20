@@ -88,6 +88,7 @@ h3 {
 p {
     font-family: "cantarell";
     font-size: 0.7em;
+    color: #FFFFFF;
     margin-bottom: 10px;
 }
 
@@ -125,9 +126,9 @@ nav ul li{
     text-decoration: underline;
 }
 
-.nav-links .active{
+.nav-links ul li .active{
     text-decoration: underline;
-    text-decoration-color: var(--viollet2);
+    color: var(--viollet1);
 }
 
 /* Mettre le même background à toutes les pages */
@@ -135,6 +136,7 @@ body{
     background: radial-gradient(126.67% 350.28% at -21.35% 0%,#11213F 0%, #0B0B0B 39.1%, rgba(2, 23, 64, 0.837641) 94.57%);
 }
 
+/* Les icons statiques sur le côté */
 .statics {
     position: sticky;
     top: 0px;
@@ -170,6 +172,7 @@ body{
     height: 60%;
 }
 
+/* Les class hero dans les différentes pages */
 .hero-accueil {
     background-image: url("illustrations + logo/Accueil/Pantherhome1..png");
     background-position: top right;
@@ -179,7 +182,7 @@ body{
     margin-top: -220px;
 }
 
-.hero-accueil a{
+.hero-accueil a,.slider a{
     color: #ffffff;
     font-size: 0.7em;
     font-family: "cantarell";
@@ -195,12 +198,13 @@ body{
 }
 
 .hero-enigme {
-    width: 100%;
+    width: 90%;
     background-image: url("illustrations + logo/Enigme/Pantherenigme1.png");
     background-position: top left;
     background-size: contain;
     background-repeat: no-repeat;
     height: 800px;
+    margin-top: -100px;
 }
 
 .div-hero {
@@ -213,36 +217,232 @@ body{
 
 .div-hero-enigme {
     float: right;
-    width: 30%;
+    width: 35%;
     height: auto;
     color: white;
-    padding-top: 10%;
+    padding-top: 25%;
 }
 
+.div-hero-enigme h1{
+    font-family: "beyno";
+    color: var(--viollet1);
+    line-height: 40px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-align: justify;
+}
+
+/* La partie slider */
 .slider {
     width: 90%;
-    margin-left: 10%;
     display: flex;
-    color: var(--viollet1);
+    margin-left: 10%;
     background-color: var(--bleue2);
 }
 
-.slider div{
-    padding-left: 1em;
-    padding-bottom: 0;
+.slider-text{
+    margin-top: 20px;
+    padding: 1em;
 }
+
 
 #killmonger{
     position: relative;
-    height: 5em;
-    width: auto;
-    top: -30px;
-    margin-bottom: -100px;
+    margin-bottom: -70px;
+    align-items: center;
+}
 
+#killmonger img{
+    width: auto;   
+    height: 20em;
+    margin-top: -2em;
+    margin-left: 1.5em;
 }
 
 .slider-img{
-    margin: 0;
     width: auto;
     height: 250px;
+}
+
+/* La petite flèche pour le slider */
+#fleche {
+    width: 200px;
+    position: absolute;
+    right: -80px;
+    top: 570px;
+}
+
+.bio {
+    display: grid;
+    width: 80%;
+    margin: 10% auto;
+    grid-template-columns: 2fr 1fr;
+    gap: 10%;
+}
+
+.bio-gauche{
+    text-align: justify;
+}
+
+.bio-droite div{
+    background-color: white;
+    font-family: "cantarell";
+    border-radius: 5px;
+    text-align: justify;
+    width: 270px;
+    height: 480px;
+    padding: 50px;
+    margin-top: 150px;
+}
+
+.bio-droite label{
+    display: block;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+}
+
+#bio-photo1 {
+    width: 300px;
+    height: auto;
+    float: inline-start;
+    position: relative;
+    margin-top: -230px;
+    left: -15px;
+}
+
+.bio-droite p{
+    color: var(--bleue2);
+    line-height: 12px;
+}
+
+.bio-droite span{
+    font-weight: bold;
+}
+
+.bio-droite button{
+    display: inline-flex;
+    margin-left: 1.2em;
+    font-size: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+    color: white;
+    background-color: var(--viollet2);
+    border-radius: 4px;
+}
+
+#bio-photo2 {
+    width: 300px;
+    height: auto;
+    margin: 3em 0em 0em 3em;
+}
+
+/* La section contact */
+.contact {
+    height: 700px;
+    background-image: url('Illustrations + Logo/Accueil/Pantherhome7.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.contact form{
+    width: 30%;
+    height: auto;
+    padding: 1em 7em 1em 7em;
+    margin: 0 auto;
+    display: block;
+    justify-content: center;
+    background-color: rgba(250, 250, 250, 0.719);
+    border-radius: 100px;
+    position: relative;
+    top: 100px;
+}
+
+.contact form p{
+    color: black;
+    text-align: center;
+}
+.contact form p+p{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contact form input,button,textarea{
+    display: block;
+    line-height: 30px;
+    margin: 0 auto;
+}
+
+.contact form input,textarea{
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 40px;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.contact form button{
+    border-radius: 10px;
+    width: 100px;
+}
+
+/* Le footer */
+footer {
+    width: 90%;
+    padding: 7em;
+    background-image: url('Illustrations + Logo/All\ pages/back_footer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.footer-image #bulle-footer {
+    width: 200px;
+}
+
+.footer-image #logo-footer {
+    width: 100px;
+    position: relative;
+    top: -120px;
+    left: -150px;
+}
+
+.card-footer {
+    display: grid;
+    grid-template-areas:
+          ". . footer-image footer-links footer-socials"
+          ". . footer-image footer-text footer-text";
+    gap: 10px;
+}
+
+.footer-image {
+    grid-area: footer-image;
+}
+
+.footer-links {
+    grid-area: footer-links;
+    color: white;
+}
+
+.footer-links ul{
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer-links ul li{
+    line-height: 25px;
+    font-family: "cantarell";
+    cursor: pointer;
+}
+
+.footer-socials {
+    grid-area: footer-socials;
+}
+
+.footer-text {
+    grid-area: footer-text;
 }
