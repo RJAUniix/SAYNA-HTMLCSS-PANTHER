@@ -173,6 +173,8 @@ body{
 }
 
 /* Les class hero dans les différentes pages */
+
+/* Dans la page d'accueil */
 .hero-accueil {
     background-image: url("illustrations + logo/Accueil/Pantherhome1..png");
     background-position: top right;
@@ -182,21 +184,38 @@ body{
     margin-top: -220px;
 }
 
-.hero-accueil a,.slider a{
+.hero-accueil a,.slider a, .hero-wakanda a{
     color: #ffffff;
     font-size: 0.7em;
     font-family: "cantarell";
 }
 
+/* Dans Wakanda */
 .hero-wakanda {
     width: 100%;
+    height: 800px;
     background-image: url("illustrations + logo/Wakanda/Pantherwakanda1.png");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
+    margin-top: -70px;
 }
 
+.hero-wakanda .div-hero {
+    width: 30%;
+    text-align: justify;
+}
+
+.hero-wakanda h1{
+    font-family: "beyno";
+    color: var(--viollet1);
+    line-height: 40px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+/* Dans Enigme */
 .hero-enigme {
     width: 90%;
     background-image: url("illustrations + logo/Enigme/Pantherenigme1.png");
@@ -204,7 +223,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     height: 800px;
-    margin-top: -100px;
+    margin-top: -15%;
 }
 
 .div-hero {
@@ -221,6 +240,7 @@ body{
     height: auto;
     color: white;
     padding-top: 25%;
+    margin-right: 5em;
 }
 
 .div-hero-enigme h1{
@@ -229,11 +249,31 @@ body{
     line-height: 40px;
     font-size: 40px;
     margin-bottom: 20px;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     text-align: justify;
+    padding: 5px;
 }
 
-/* La partie slider */
+.hero-text-enigme {
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+.div-hero-enigme #hero-img1 {
+    width: 600px;
+    align-self: center;
+    margin-top: -16em;
+    margin-left: -7em;
+}
+
+.div-hero-enigme #hero-img2 {
+    width: 700px;
+    position: relative;
+    top: -4em;
+    left: -5em;
+}
+
+/* Les sections dans Accueil*/
 .slider {
     width: 90%;
     display: flex;
@@ -370,7 +410,7 @@ body{
     font-weight: bold;
 }
 
-.contact form input,button,textarea{
+.contact form input,.contact form button,.contact form textarea{
     display: block;
     line-height: 30px;
     margin: 0 auto;
@@ -389,6 +429,88 @@ body{
     border-radius: 10px;
     width: 100px;
 }
+/* La fin des sections dans Accueil */
+
+/* Les sections dans Wakanda */
+.doc {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10%;
+    margin: 0 auto;
+    text-align: justify;
+}
+/* La fin des section dans Wakanda */
+
+/* Les sections dans Enigme */
+
+#text-enigme {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "text text"
+        "alpha paragraphe";
+    gap: 1em;
+    margin-bottom: 150px;
+}
+
+#text-enigme h3{
+    grid-area: text;
+    font-family: "wakanda_forever";
+    letter-spacing: 7px;
+    line-height: 30px;
+    margin-bottom: 2em;
+}
+
+#text-enigme p .car {
+    font-family: "wakanda_forever";
+}
+
+#form {
+    margin-top: 100px;
+}
+
+#text-enigme input {
+    width: 75%;
+    padding: 7px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid var(--rose1);
+}
+
+#text-enigme #div-btn{
+    width: 75%;
+    text-align: center;
+}
+
+#text-enigme button{
+    width: 120px;
+    padding: 9px;
+    border-radius: 50px;
+    background-color: var(--rose1);
+}
+
+.question {
+    grid-area: paragraphe;
+    width: 30vw;
+    text-align: center;
+    margin-top: 5em;
+    margin-left: 5em;
+}
+
+.question img {
+    width: 600px;
+    margin-top: -230px;
+    margin-left: -90px;
+}
+
+.enigme-droite{
+    grid-area: alpha;
+}
+
+/* Fin des sections dans Enigme */
 
 /* Le footer */
 footer {
