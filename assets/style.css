@@ -3,14 +3,15 @@
     padding: 0;
 }
 
+/* Annimation venant de la droite pour tous les éléments */
 html {
     animation: body 2s ease-out forwards;
 }
 
-/* Annimation venant de la droite pour tous les éléments */
 html {
     animation: html 2s ease-out;
 }
+
 @keyframes html {
     from {
       opacity: 0;
@@ -122,6 +123,12 @@ nav .nav-logo img{
     width: 100px;
     height: auto;
     margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-logo img:hover {
+    filter: invert(80%) sepia(80%) saturate(5);
 }
 
 nav ul{
@@ -219,7 +226,7 @@ body{
 .hero-wakanda {
     width: 100%;
     height: 800px;
-    background-image: url("illustrations + logo/Wakanda/Pantherwakanda1.png");
+    background-image: url("illustrations + logo/Wakanda/Pantherwakanda1-mod.png");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -457,8 +464,13 @@ body{
     line-height: 30px;
     margin: 0 auto;
 }
+
 .contact form input {
     height: 10px;
+}
+
+.contact form input::placeholder,.contact form textarea::placeholder {
+    color: black;
 }
 
 .contact form input,textarea{
@@ -498,7 +510,7 @@ body{
     gap: 10%;
     margin: 0 auto;
     text-align: justify;
-    background: url('Illustrations + Logo/Wakanda/Pantherwakanda2.png');
+    background: url('Illustrations + Logo/Wakanda/Pantherwakanda2-mod.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
@@ -507,6 +519,11 @@ body{
 .doc div {
     padding-top: 50px;
     padding-bottom: 50px;
+}
+
+.doc div img {
+    margin-top: 1em;
+    width: 35vw;
 }
 
 /* La fin des section dans Wakanda */
@@ -542,11 +559,17 @@ body{
 
 #text-enigme input {
     width: 75%;
-    padding: 7px;
+    padding: 7px 7px 7px 25px;
     margin-bottom: 50px;
     border-radius: 50px;
     background-color: transparent;
     border: 1px solid var(--rose1);
+    color: var(--rose1);
+}
+
+#text-enigme input::placeholder {
+    font-size: 11px;
+    color: var(--rose1);
 }
 
 #text-enigme #div-btn{
@@ -559,6 +582,8 @@ body{
     padding: 9px;
     border-radius: 50px;
     background-color: var(--rose1);
+    font-size: 11px;
+    font-weight: bold;
 }
 
 .question {
@@ -591,6 +616,12 @@ footer {
     background-repeat: no-repeat;
 }
 
+.footer-image #bulle-footer, .footer-image #logo-footer{position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .footer-image #bulle-footer {
     width: 200px;
 }
@@ -598,8 +629,7 @@ footer {
 .footer-image #logo-footer {
     width: 100px;
     position: relative;
-    top: -120px;
-    left: -150px;
+    z-index: 1;
 }
 
 .card-footer {
@@ -611,7 +641,9 @@ footer {
 }
 
 .footer-image {
-    grid-area: footer-image;
+    grid-area: footer-image; 
+    position: relative;
+    margin-right: 5em;
 }
 
 .footer-links {
@@ -661,16 +693,46 @@ footer {
 /* La responsivité  */
 
 /* Pour la page d'acceuil */
+@media screen and (max-width: 1000px) {
+    .slider-text {margin-top: 0;}
+    #killmonger img {margin-top: 0;}
+    .bio {display: block; margin: 0 auto;}
+    .bio-droite div {margin: 0 auto;}
+    #bio-photo2 {margin-left: 20vw;}
+}
+
+@media screen and (max-width: 800px) {
+    .bio {display: block; margin: 0 auto;}
+    .bio-gauche {margin-bottom: 15em;}
+    .contact form {width: 90%; padding: 2em;}
+    footer {width: 100%; padding: 1em 0; margin: 0 auto;}
+    .card-footer {
+        width: 90%;
+        margin: 2em auto;
+        display: grid;
+        grid-template-areas: 
+            "footer-image footer-links"
+            "footer-image footer-socials"
+            "footer-text footer-text";
+        gap: 10px;
+    }
+    .footer-image { padding: 3em;}
+    .footer-image #bulle-footer {width: 150px;}
+    .footer-image #logo-footer {width: 70px;}
+    .footer-text p{ text-align: center;}
+}
+
+
 @media screen and (max-width: 400px) {
     .nav-logo img{visibility: hidden; position: absolute;}
     .statics {margin-left: 10px;}
-    .icons-statics {margin-left: 5px;}
+    .icons-statics {margin-left: 3px;}
     #hr2 {margin-left: 5px;}
     section{padding: 0px 1em 0px 1em;}
     .div-hero img{visibility: hidden;}
     .hero-accueil {background-image: none;}
     .div-hero {background-image: none; width: 10%; height: auto;}
-    #hero-accueil-text p{padding-right: 7em;}
+    #hero-accueil-text p{padding-right: 10em;}
     .bio {display: block; margin: 0 auto;}
     .bio-gauche {margin-bottom: 15em;}
     .bio-droite div {width: 150px; margin: 0 auto;}
@@ -683,7 +745,7 @@ footer {
               "footer-image footer-socials"
               "footer-text footer-text"; gap: 10px;
     }
-    .footer-image #bulle-footer {width: 150px;}
-    .footer-image #logo-footer {top: -110px; left: 25px;}
-    .footer-text p{ text-align: center;}
+    .footer-image {margin-right: 0px;}
   }
+
+  
