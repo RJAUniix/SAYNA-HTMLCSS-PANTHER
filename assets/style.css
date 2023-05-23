@@ -128,7 +128,7 @@ nav .nav-logo img{
 }
 
 .nav-logo img:hover {
-    filter: invert(80%) sepia(80%) saturate(5);
+    filter: invert(70%) sepia(5%) saturate(0);
 }
 
 nav ul{
@@ -184,6 +184,12 @@ body{
 .icons-statics img{
     width: 20px;
     margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Annimation sur les icons */
+.icons-statics img:hover{
+    filter: invert(0%) sepia(100%) saturate(0);
 }
 
 #hr1 {
@@ -226,7 +232,7 @@ body{
 .hero-wakanda {
     width: 100%;
     height: 800px;
-    background-image: url("illustrations + logo/Wakanda/Pantherwakanda1-mod.png");
+    background-image: url("illustrations + logo/Wakanda/Pantherwakanda1.png");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -262,7 +268,7 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     height: 800px;
-    margin-top: -15%;
+    margin-top: -10em;
 }
 
 .div-hero {
@@ -294,22 +300,32 @@ body{
 }
 
 .hero-text-enigme {
-    margin-top: 150px;
-    margin-left: 50px;
-    text-align: justify;
+    margin-top: 40px;
+    width: 30%;
+    text-align: justify;    
+    margin-top: 200px;
+    margin-left: 300px;
+}
+
+.hero-text-enigme p{
+    margin-top: 20px;
+}
+
+.hero-text-enigme, .div-hero-enigme #hero-img1 {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .div-hero-enigme #hero-img1 {
-    width: 550px;
-    margin-top: -15em;
-    margin-left: -5em;
+    width: 600px;
 }
 
 .div-hero-enigme #hero-img2 {
     width: 700px;
-    position: relative;
-    top: -4em;
-    left: -5em;
+    position: absolute;
+    margin-top: 100px;
 }
 
 /* Les sections dans Accueil*/
@@ -327,6 +343,8 @@ body{
 
 .slider-text p{
     text-align: justify;
+    height: 300px;
+    overflow: auto;
 }
 
 
@@ -516,6 +534,11 @@ body{
     background-position: top;
 }
 
+.doc iframe{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .doc div {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -523,7 +546,7 @@ body{
 
 .doc div img {
     margin-top: 1em;
-    width: 35vw;
+    width: 100%;
 }
 
 /* La fin des section dans Wakanda */
@@ -532,7 +555,7 @@ body{
 
 #text-enigme {
     width: 70%;
-    margin: 0 auto;
+    margin: 5% auto;
     display: grid;
     grid-template-areas: 
         "text text"
@@ -584,6 +607,12 @@ body{
     background-color: var(--rose1);
     font-size: 11px;
     font-weight: bold;
+    transition: box-shadow 0.3s ease;
+    border: none;
+}
+
+#text-enigme button:hover{
+    box-shadow: 0 0 20px var(--rose1);
 }
 
 .question {
@@ -594,10 +623,26 @@ body{
     margin-left: 5em;
 }
 
-.question img {
-    width: 600px;
-    margin-top: -230px;
-    margin-left: -90px;
+.question div, .question div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} 
+
+.question div p {
+    width: 100%;
+}
+
+.question div {
+    position: relative;
+    z-index: 1;
+    margin-top: -100px;
+}
+
+.question div img {
+    width: 550px;
+    margin-left: 15px;
 }
 
 .enigme-droite{
@@ -616,10 +661,11 @@ footer {
     background-repeat: no-repeat;
 }
 
-.footer-image #bulle-footer, .footer-image #logo-footer{position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.footer-image #bulle-footer, .footer-image #logo-footer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .footer-image #bulle-footer {
@@ -644,6 +690,11 @@ footer {
     grid-area: footer-image; 
     position: relative;
     margin-right: 5em;
+    transition: all 0.5s ease-out; /* Animation de 0,5s avec un effet de transition doux */
+}
+  
+.footer-image:hover {
+    transform: scale(1.1);
 }
 
 .footer-links {
@@ -674,19 +725,25 @@ footer {
     grid-area: footer-socials;
 }
 
-.footer-socials p{
+.footer-socials p {
     font-weight: bold;
     font-size: 13px;
     letter-spacing: 5px;
     margin-bottom: 20px;
 }
 
-.footer-socials img{
+.footer-socials img {
     width: 30px;
     margin-right: 20px;
+    transition: all 0.5s ease-out; /* Animation de 0,5s avec un effet de transition doux */
+}
+  
+.footer-socials img:hover {
+    transform: scale(1.1);
 }
 
 .footer-text {
+    margin-top: 80px;
     grid-area: footer-text;
 }
 
@@ -697,14 +754,19 @@ footer {
     .slider-text {margin-top: 0;}
     #killmonger img {margin-top: 0;}
     .bio {display: block; margin: 0 auto;}
-    .bio-droite div {margin: 0 auto;}
+    .bio-gauche {margin-bottom: 30%;}
+    .bio-droite div{margin: 0 auto}
     #bio-photo2 {margin-left: 20vw;}
 }
 
 @media screen and (max-width: 800px) {
+    .bio p{font-size: 19px;}
+    .hero-accueil {margin-bottom: 10%;}
     .bio {display: block; margin: 0 auto;}
     .bio-gauche {margin-bottom: 15em;}
+    .bio-droite p {line-height: 1em;}
     .contact form {width: 90%; padding: 2em;}
+    /* Pour tous les footer */
     footer {width: 100%; padding: 1em 0; margin: 0 auto;}
     .card-footer {
         width: 90%;
@@ -727,17 +789,20 @@ footer {
     .nav-logo img{visibility: hidden; position: absolute;}
     .statics {margin-left: 10px;}
     .icons-statics {margin-left: 3px;}
+    .hero-accueil {margin-bottom: 70%;}
     #hr2 {margin-left: 5px;}
     section{padding: 0px 1em 0px 1em;}
     .div-hero img{visibility: hidden;}
     .hero-accueil {background-image: none;}
     .div-hero {background-image: none; width: 10%; height: auto;}
     #hero-accueil-text p{padding-right: 10em;}
+    #fleche {top: 850px}
     .bio {display: block; margin: 0 auto;}
     .bio-gauche {margin-bottom: 15em;}
-    .bio-droite div {width: 150px; margin: 0 auto;}
+    .bio-droite div {width: 150px; height: 600px; margin: 50% auto;}
     .bio-droite div #bio-photo1 {width: 180px;}
     .bio-droite #bio-photo2 {padding: 0; margin: 0;}
+    /* Pour tous les footer */
     .contact form {width: 40%; padding: 5em;}
     footer {width: 100%; padding: 1em 0 1em 0; margin: 0 auto;}
     .card-footer {width: 90%; margin: 3em auto; display: grid; grid-template-areas:
@@ -748,4 +813,56 @@ footer {
     .footer-image {margin-right: 0px;}
   }
 
+  /* Dans la page Wakanda */
+  @media screen and (max-width: 800px) {
+    .hero-wakanda h1 {margin-top: 3em;}
+    .hero-wakanda .div-hero {width: 50%;}
+  } 
   
+  @media screen and (max-width: 600px) {
+    .hero-wakanda h1 {width: auto;}
+    .hero-wakanda .div-hero {width: 60%;}
+    .doc  {display: block;}
+  }
+
+  @media screen and (max-width: 400px) {
+    .hero-wakanda h1 {width: auto;}
+    .hero-wakanda .div-hero {width: 70%;}
+    .doc  {display: block;}
+  }
+
+  /* Pour la page Enigme */
+
+  @media screen and (max-width: 1000px) {
+    .div-hero-enigme {display: block; float: none; margin: 0 auto;}
+    .div-hero-enigme h1{text-align: center; margin: 0 auto; text-shadow: 1px 1px 1px  rgb(0, 0, 0);}
+    .hero-text-enigme {margin: 20% 0 0 0;}
+    .hero-text-enigme #hero-img2 {visibility: hidden;}
+  }
+
+  
+  @media screen and (max-width: 700px) {
+    .hero-text-enigme {margin-top: 20%; font-size: 13px; margin-bottom: 150%;}
+    .div-hero-enigme h1 {margin-top: 150px; width: 170%; margin-bottom: 20%;}
+    #form {margin-top: 2em;}
+    #text-enigme { grid-template-areas:
+                        "text text"
+                        "alpha alpha" 
+                        "paragraphe paragraphe";}
+    .question {margin-top: 200px;}
+    .question div{width: 150%; font-size: 17px;}
+    }  
+    
+@media screen and (max-width: 400px) {
+    .hero-enigme {background-image: none;}
+    .div-hero-enigme div{width: 90%;}
+    #form {margin-top: 2em;}
+    #text-enigme { grid-template-areas:
+                        "text text"
+                        "alpha alpha" 
+                        "paragraphe paragraphe";}
+                        
+    .text-enigme {margin-top: 90%;}
+    .question {margin-top: 250px;}
+    .question div{width: 150%; font-size: 17px;}
+}
