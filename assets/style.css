@@ -799,6 +799,7 @@ footer {
     .icons-statics {margin-left: 3px;}
     .hero-accueil {margin-bottom: 10%;}
     #hero-accueil-text p{font-size: 13px;}
+    /* Pour éviter le découpage de mot */
     .div-hero a{width: 150%; white-space: nowrap;}
     #hr2 {margin-left: 5px;}
     section{padding: 0px 1em 0px 1em;}
