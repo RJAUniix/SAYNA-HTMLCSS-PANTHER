@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Annimation venant de la droite pour tous les éléments */
@@ -394,8 +395,8 @@ body{
     font-family: "cantarell";
     border-radius: 5px;
     text-align: justify;
-    width: 270px;
-    height: 480px;
+    width: 100%;
+    height: 550px;
     padding: 50px;
     margin-top: 150px;
 }
@@ -414,7 +415,6 @@ body{
     float: inline-start;
     position: relative;
     margin-top: -230px;
-    left: -15px;
 }
 
 .bio-droite p{
@@ -455,7 +455,7 @@ body{
 }
 
 .contact form{
-    width: 35%;
+    width: 50%;
     height: auto;
     padding: 3em 7em 3em 7em;
     margin: 0 auto;
@@ -657,7 +657,7 @@ body{
 
 /* Le footer */
 footer {
-    width: 90%;
+    width: 100%;
     padding: 7em;
     background-image: url('Illustrations_Logo/All_pages/back_footer.png');
     background-position: center;
